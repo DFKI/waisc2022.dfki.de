@@ -1,0 +1,29 @@
+<div class="news-list">
+   {% assign count = 0 %}
+   {% for news in site.categories.news %}
+      {% if count < 3 %}
+         <div>
+            <a href="{{ news.url }}">
+               <div class="recent-news info-box right">
+
+                  <div class="icon-holder">
+                     <!--<i class="fa fa-newspaper-o"></i>-->
+                     <span class="date">{{ news.date | date: "%d" }}</span>
+                     <span class="month">{{ news.date | date: "%b" }}</span>
+                  </div>
+
+                  <div>
+                     <p><span>{{ news.title }}</span><br />{{ news.subtitle }}</p>
+                  </div>
+
+               </div>
+            </a>
+         </div>
+         {% assign count = count | plus: 1 %}
+      {% endif %}
+   {% endfor %}
+
+   <div class="archive-link">
+      <a href="/archive/">&raquo; News Archive</a>
+   </div>
+</div>
