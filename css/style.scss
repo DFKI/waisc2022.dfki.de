@@ -23,8 +23,8 @@
 @import 'placeholders';
 @import 'variables';
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext);
 
 @function em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;
