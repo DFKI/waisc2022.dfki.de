@@ -1,42 +1,43 @@
 ---
 layout: base
 ---
-<div class="page news{% if page.page-class %} {{page.page-class}}{% endif %}{% if page.event %} news-{{page.event}}{% endif %} archive">
-   {% include header.html %}
-   <!-- intro -->
-   <div class="intro">
-      <div class="container">
-         <h3><strong>News Archive</strong></h3>
 
-         <div class="recent-news">
-         {% for news in site.categories.news %}
-            <div>
-               <a href="{{ news.url }}">
-                  <div class="recent-news info-box">
-                     <div class="icon-holder">
-                        <!--<i class="fa fa-newspaper-o"></i>-->
-                        <span class="date">{{ news.date | date: "%d" }}</span>
-                        <span class="month">{{ news.date | date: "%b" }}</span>
-                     </div>
+<div
+  class="page news{% if page.page-class %} {{page.page-class}}{% endif %}{% if page.event %} news-{{page.event}}{% endif %} archive"
+>
+  {% include header.html %}
+  <!-- intro -->
+  <div class="intro">
+    <div class="container">
+      <h3><strong>News Archive</strong></h3>
 
-                     <div>
-                        <p>
-                           <strong>
-                              {{ news.event }}
-                           </strong>
-                        </p>
-                        <p>
-                           <span>{{ news.title }}</span><br />
-                           {{ news.subtitle }}
-                        </p>
-                     </div>
-                  </div>
-               </a>
+      <div class="recent-news">
+        {% for news in site.categories.news %}
+        <div>
+          <a href="{{ news.url }}">
+            <div class="recent-news info-box">
+              <div class="icon-holder">
+                <!--<i class="fa fa-newspaper-o"></i>-->
+                <span class="date">{{ news.date | date: "%d" }}</span>
+                <span class="month">{{ news.date | date: "%b" }}</span>
+              </div>
+
+              <div>
+                <p>
+                  <strong> {{ news.event }} </strong>
+                </p>
+                <p>
+                  <span>{{ news.title }}</span><br />
+                  {{ news.subtitle }}
+                </p>
+              </div>
             </div>
-         {% endfor %}
-         </div>
+          </a>
+        </div>
+        {% endfor %}
       </div>
-   </div>
+    </div>
+  </div>
 
-   {% include footer.html %}
+  {% include footer.html %}
 </div>

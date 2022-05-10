@@ -19,30 +19,54 @@
 
 /* 1. Imports & Clears */
 
-@import 'mixins';
-@import 'placeholders';
-@import 'variables';
+@import "mixins";
+@import "placeholders";
+@import "variables";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext);
 
 @function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
+  @return ($px / $base) * 1em;
 }
 
 /* natural box layout model to all elements */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   @include box-sizing(border-box);
 }
 
 /* 2. Reset */
 
-body, h1, h2, h3, h4, h5, h6, ul, li, form, div, p, ol, button, hr, blockquote {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+form,
+div,
+p,
+ol,
+button,
+hr,
+blockquote {
   margin: 0;
   padding: 0;
 }
 
-article, figure, footer, header, nav, section, details, summary {
+article,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
   display: block;
 }
 
@@ -62,21 +86,32 @@ body {
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-bottom: $default-spacing * 3;
   line-height: 1.1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   font-family: $headers-font;
 }
 
-p, h4, h5, h6 {
+p,
+h4,
+h5,
+h6 {
   margin-bottom: $default-spacing;
 }
 
-input, textarea {
+input,
+textarea {
   &:focus {
     outline: none;
   }
@@ -86,7 +121,8 @@ textarea {
   resize: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: em(72px);
   font-weight: bold;
 
@@ -94,7 +130,8 @@ h1, h2 {
     font-size: em(64px);
   }
 
-  @media all and (max-width: 940px) { // 980px
+  @media all and (max-width: 940px) {
+    // 980px
     font-size: em(56px);
   }
 
@@ -122,7 +159,7 @@ a {
   color: $default-font-color;
   outline: none;
 
-  @include transition (all, 0.2s);
+  @include transition(all, 0.2s);
 
   &:hover {
     text-decoration: underline;
@@ -130,7 +167,8 @@ a {
   }
 }
 
-.subtitle, .intro h3 {
+.subtitle,
+.intro h3 {
   font-size: em(26px);
   font-family: $headers-font;
   font-weight: 300;
@@ -140,7 +178,8 @@ a {
     font-size: em(25px);
   }
 
-  @media all and (max-width: 940px) { // 980px
+  @media all and (max-width: 940px) {
+    // 980px
     font-size: em(24px);
   }
 
@@ -168,7 +207,6 @@ a {
       width: 98%;
     }
   }
-
 } //.main ends
 
 /* 5. Header */
@@ -180,7 +218,8 @@ a {
     -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%);
     clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%);
   }
-  background: $gray url('../images/36869016425_e7221366d2_k.jpg') 50% -100px no-repeat fixed;
+  background: $gray url("../images/36869016425_e7221366d2_k.jpg") 50% -100px no-repeat
+    fixed;
   background-size: cover;
   color: $gray;
   z-index: 1;
@@ -205,12 +244,11 @@ a {
       min-height: 950px;
     }
 
-
-    background: rgba(255,255,255,$header-opacity);
+    background: rgba(255, 255, 255, $header-opacity);
   }
 
   .menu {
-    background: transparentize($default-color, .2);
+    background: transparentize($default-color, 0.2);
 
     @extend %clear;
   }
@@ -233,7 +271,8 @@ a {
         text-transform: uppercase;
         font-weight: 300;
 
-        &:hover, &.active {
+        &:hover,
+        &.active {
           color: $default-font-color;
         }
       }
@@ -253,15 +292,15 @@ a {
     text-decoration: none;
     color: #222;
   }
-
 } //.header ends
-
 
 .dates .container {
   padding-bottom: 60px;
 }
 
-.when, .where, .register-now {
+.when,
+.where,
+.register-now {
   position: absolute;
 
   @media all and (max-width: 940px) {
@@ -331,7 +370,7 @@ a {
     span.date {
       display: block;
       font-size: em(12px);
-      line-height: 24px
+      line-height: 24px;
     }
     span.month {
       display: block;
@@ -397,8 +436,6 @@ a {
   @media all and (max-width: 1180px) {
     text-align: left;
   }
-
-
 
   a.button {
     display: inline-block;
@@ -474,10 +511,12 @@ a {
     font-weight: 300;
     margin-top: 30px;
   }
-
 } //.intro ends
 
-.events, .why, .registration, .sponsors {
+.events,
+.why,
+.registration,
+.sponsors {
   margin-bottom: $default-spacing * 6;
 
   @media print {
@@ -486,7 +525,6 @@ a {
 }
 
 .section {
-
   @media screen {
     padding-top: 60px;
   }
@@ -495,7 +533,8 @@ a {
     padding-top: 124px;
   }
 
-  h2, .subtitle {
+  h2,
+  .subtitle {
     @media screen {
       padding: 0 $default-spacing * 6;
     }
@@ -585,7 +624,6 @@ a {
 
   .container {
     a {
-
       @media screen {
         width: 32%;
         float: left;
@@ -613,7 +651,8 @@ a {
         margin-right: 0;
       }
 
-      h4, .fa {
+      h4,
+      .fa {
         color: $default-color;
         margin-bottom: $default-spacing * 2; //reset
 
@@ -639,7 +678,8 @@ a {
       }
 
       @media screen {
-        &.active, &:hover {
+        &.active,
+        &:hover {
           border: 3px solid $default-color;
         }
       }
@@ -658,13 +698,13 @@ a {
         line-height: 54px;
 
         @media all and (max-width: 640px) {
-         //  height: auto;
-         //  width: auto;
+          //  height: auto;
+          //  width: auto;
           margin: 0;
           float: none;
           line-height: 1;
           background-color: $white;
-         //  color: $default-color;
+          //  color: $default-color;
           text-align: left;
         }
 
@@ -684,21 +724,17 @@ a {
   }
 }
 
-
 /* 7. Speakers */
 
 .speakers {
-
   @extend %clear;
 
   .container > h2 {
     margin-bottom: 30px;
   }
-
 } //.speakers ends
 
 .featured {
-
   @extend %clear;
 
   img {
@@ -708,7 +744,9 @@ a {
     margin: 0 auto;
   }
 
-  h3, .title, h4 {
+  h3,
+  .title,
+  h4 {
     line-height: 1.1em;
     font-weight: 300;
     color: $white;
@@ -793,7 +831,8 @@ a {
   @media print {
     font-size: em(16px);
 
-    img, .image {
+    img,
+    .image {
       display: none;
     }
 
@@ -809,7 +848,9 @@ a {
       }
     }
 
-    .title, h4, div {
+    .title,
+    h4,
+    div {
       color: $gray;
     }
 
@@ -823,9 +864,7 @@ a {
 /* 8. Schedule */
 
 .schedule {
-
   @extend %clear;
-
 
   ul {
     list-style-type: none;
@@ -920,7 +959,6 @@ a {
       }
     }
   }
-
 } //.schedule ends
 
 .image-attribution {
@@ -950,21 +988,22 @@ a {
     padding: 0 !important;
     margin-bottom: $default-spacing;
 
-    li, li.ui-tabs-active {
+    li,
+    li.ui-tabs-active {
       padding: 0;
       margin: 0;
     }
 
     li {
-
-      @include transition (all, 0.2s);
+      @include transition(all, 0.2s);
 
       .ui-tabs-anchor {
         text-align: center;
         padding: 0.5em 0;
       }
 
-      &.ui-state-active, &.ui-state-active.ui-state-hover {
+      &.ui-state-active,
+      &.ui-state-active.ui-state-hover {
         background-color: $default-color;
         color: $white;
 
@@ -981,8 +1020,8 @@ a {
   } //.ui-tabs-nav ends
 } //.ui-tabs ends
 
-.day, .event {
-
+.day,
+.event {
   @extend %clear;
 }
 
@@ -1006,13 +1045,16 @@ a {
       width: 50%;
       background: $default-color;
 
-      &:nth-child(4n+1), &:nth-child(4n+2) {
-        > img, > div {
+      &:nth-child(4n + 1),
+      &:nth-child(4n + 2) {
+        > img,
+        > div {
           float: right;
         }
       }
 
-      > img, > div {
+      > img,
+      > div {
         float: left;
         width: 50%;
       }
@@ -1066,7 +1108,7 @@ a {
         }
 
         &:before {
-          content: '';
+          content: "";
           width: 30px;
           height: 5px;
           background: $white;
@@ -1078,7 +1120,7 @@ a {
       a {
         color: $white;
         margin-right: $default-spacing;
-        opacity: .6;
+        opacity: 0.6;
 
         &:hover {
           opacity: 1;
@@ -1089,9 +1131,8 @@ a {
 }
 
 .event {
-
-  &.extend, &.extended {
-
+  &.extend,
+  &.extended {
     .event-time span {
       width: 20px;
       height: 20px;
@@ -1119,7 +1160,8 @@ a {
     padding-bottom: 0;
   }
 
-  .event-time, .event-info {
+  .event-time,
+  .event-info {
     float: left;
   }
 
@@ -1162,7 +1204,8 @@ a {
     }
   }
 
-  .event-time, .event-info h4 {
+  .event-time,
+  .event-info h4 {
     font-family: $headers-font;
     font-size: em(24px);
     font-weight: 300;
@@ -1184,7 +1227,7 @@ a {
 
     @media print {
       padding-left: 40px;
-      width: 804px / 1134px * 100%
+      width: 804px / 1134px * 100%;
     }
 
     h4 {
@@ -1275,10 +1318,10 @@ a {
   }
 
   a {
-     border-bottom: none;
-     &:hover {
-        border-bottom: none;
-     }
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+    }
   }
 }
 
@@ -1314,7 +1357,7 @@ a {
     color: $default-font-color;
     font-weight: 300;
     margin-bottom: $default-spacing * 3.5;
-    background: url('../images/quote.png') top center no-repeat;
+    background: url("../images/quote.png") top center no-repeat;
     padding: 25px 0 10px;
   }
 
@@ -1341,7 +1384,8 @@ a {
   ul.flex-direction-nav {
     list-style-type: none;
 
-    .flex-prev, .flex-next {
+    .flex-prev,
+    .flex-next {
       display: block;
       position: absolute;
       width: 64px;
@@ -1353,7 +1397,7 @@ a {
       margin-top: -32px;
 
       &:hover {
-        background-color: lighten($default-color, 10%)
+        background-color: lighten($default-color, 10%);
       }
     }
 
@@ -1372,12 +1416,13 @@ a {
   }
 
   @media screen and (max-width: 780px) {
-     padding: 0 60px;
+    padding: 0 60px;
   }
 
   @extend %clear;
 
-  h3, h4 {
+  h3,
+  h4 {
     font-size: em(24px);
     font-weight: 300;
   }
@@ -1406,7 +1451,7 @@ a {
 
     &:nth-child(even) {
       @media screen and (min-width: 781px) {
-         margin-left: 2%;
+        margin-left: 2%;
       }
     }
 
@@ -1427,21 +1472,18 @@ a {
 }
 
 .airport-bullets {
-   > div {
-      min-height: 120px;
-   }
+  > div {
+    min-height: 120px;
+  }
 }
 
 h2 + .bullets {
   margin-top: 30px;
 }
 
-
-
 /* 10. Sponsors */
 
 .sponsors {
-
   .container {
     padding: 0 60px;
   }
@@ -1452,8 +1494,8 @@ h2 + .bullets {
 }
 
 .registration {
-   padding-left: 60px;
-   padding-right: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 
   .desc {
     font-size: em(17px);
@@ -1461,7 +1503,8 @@ h2 + .bullets {
     color: $gray;
   }
 
-  .subtitle, .desc {
+  .subtitle,
+  .desc {
     margin-bottom: $default-spacing * 4;
   }
 
@@ -1512,7 +1555,8 @@ h2 + .bullets {
   }
 } //.registration ends
 
-.form, .price {
+.form,
+.price {
   float: left;
   width: 50%;
 
@@ -1535,17 +1579,18 @@ h2 + .bullets {
 }
 
 @media all and (min-width: 1181px) {
-   .form + .form {
-     padding: 0 0 0 15px;
-   }
+  .form + .form {
+    padding: 0 0 0 15px;
+  }
 }
 
 .form {
-
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     width: 100%;
     display: block;
-    margin-bottom: $default-spacing * .8;
+    margin-bottom: $default-spacing * 0.8;
     border: 3px solid $light-gray;
     background-color: $light-gray;
     padding: 10px;
@@ -1555,14 +1600,15 @@ h2 + .bullets {
     //font-weight: bold;
     color: $black;
 
-    @include transition (all, 0.2s);
+    @include transition(all, 0.2s);
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       background-color: $white;
     }
   }
 
-  input[type=submit] {
+  input[type="submit"] {
     font-size: em(24px);
     color: $white;
     background-color: $default-color;
@@ -1572,7 +1618,7 @@ h2 + .bullets {
     font-family: $headers-font;
     cursor: pointer;
 
-    @include transition (all, 0.2s);
+    @include transition(all, 0.2s);
 
     &:hover {
       background: $white;
@@ -1631,9 +1677,10 @@ h2 + .bullets {
       padding: $default-spacing;
     }
 
-    @include transition (all, 0.2s);
+    @include transition(all, 0.2s);
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
       border: 3px solid $default-color;
     }
 
@@ -1642,7 +1689,7 @@ h2 + .bullets {
     }
 
     p {
-      font-size:em(16px);
+      font-size: em(16px);
     }
 
     .amount {
@@ -1673,7 +1720,6 @@ h2 + .bullets {
 }
 
 .sponsors {
-
   .container {
     position: relative;
 
@@ -1714,7 +1760,8 @@ h2 + .bullets {
     }
   }
 
-  .flex-prev, .flex-next {
+  .flex-prev,
+  .flex-next {
     position: absolute;
     top: 50%;
     display: block;
@@ -1747,20 +1794,38 @@ h2 + .bullets {
   @media screen {
     padding-top: 124px;
 
-    h2, .subtitle {
+    h2,
+    .subtitle {
       color: $white;
       padding: 0 60px;
     }
   }
 
-  background: $black url('../images/unitrier-campus_07.jpg') no-repeat 50% 0 fixed;
+  background: $black url("../images/unitrier-campus_07.jpg") no-repeat 50% 0
+    fixed;
 
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.6)), to(rgba(0,0,0,.6))), url('../images/unitrier-campus_07.jpg') no-repeat 50% 0 fixed; /* Saf4+, Chrome */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/unitrier-campus_07.jpg') no-repeat 50% 0 fixed; /* Chrome 10+, Saf5.1+ */
-  background: -moz-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/unitrier-campus_07.jpg') no-repeat 50% 0 fixed; /* FF3.6+ */
-  background: -ms-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/unitrier-campus_07.jpg') no-repeat 50% 0 fixed; /* IE10 */
-  background: -o-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/unitrier-campus_07.jpg') no-repeat 50% 0 fixed; /* Opera 11.10+ */
-  background: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/unitrier-campus_07.jpg') no-repeat 50% 0 fixed; /* W3C */
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.6)),
+      to(rgba(0, 0, 0, 0.6))
+    ),
+    url("../images/unitrier-campus_07.jpg") no-repeat 50% 0 fixed; /* Saf4+, Chrome */
+  background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/unitrier-campus_07.jpg") no-repeat 50% 0 fixed; /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/unitrier-campus_07.jpg") no-repeat 50% 0 fixed; /* FF3.6+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/unitrier-campus_07.jpg") no-repeat 50% 0 fixed; /* IE10 */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/unitrier-campus_07.jpg") no-repeat 50% 0 fixed; /* Opera 11.10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/unitrier-campus_07.jpg") no-repeat 50% 0 fixed; /* W3C */
 
   @include background-size(cover);
 
@@ -1778,28 +1843,44 @@ h2 + .bullets {
       display: none;
     }
   }
-
 } //.location
 
 .submission {
   @media screen {
     padding-top: 124px;
 
-    h2, .subtitle {
+    h2,
+    .subtitle {
       color: $white;
     }
   }
 
   position: relative;
 
-  background: $black url('../images/paper-cranes.jpg') no-repeat 50% 0 fixed;
+  background: $black url("../images/paper-cranes.jpg") no-repeat 50% 0 fixed;
 
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.6)), to(rgba(0,0,0,.6))), url('../images/paper-cranes.jpg') no-repeat 50% 0 fixed; /* Saf4+, Chrome */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/paper-cranes.jpg') no-repeat 50% 0 fixed; /* Chrome 10+, Saf5.1+ */
-  background: -moz-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/paper-cranes.jpg') no-repeat 50% 0 fixed; /* FF3.6+ */
-  background: -ms-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/paper-cranes.jpg') no-repeat 50% 0 fixed; /* IE10 */
-  background: -o-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/paper-cranes.jpg') no-repeat 50% 0 fixed; /* Opera 11.10+ */
-  background: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../images/paper-cranes.jpg') no-repeat 50% 0 fixed; /* W3C */
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.6)),
+      to(rgba(0, 0, 0, 0.6))
+    ),
+    url("../images/paper-cranes.jpg") no-repeat 50% 0 fixed; /* Saf4+, Chrome */
+  background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/paper-cranes.jpg") no-repeat 50% 0 fixed; /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/paper-cranes.jpg") no-repeat 50% 0 fixed; /* FF3.6+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/paper-cranes.jpg") no-repeat 50% 0 fixed; /* IE10 */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/paper-cranes.jpg") no-repeat 50% 0 fixed; /* Opera 11.10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/paper-cranes.jpg") no-repeat 50% 0 fixed; /* W3C */
 
   @include background-size(cover);
 
@@ -1807,14 +1888,12 @@ h2 + .bullets {
     z-index: 10;
     position: relative;
   }
-
 } //.submission
 
 .dates {
   @extend %clear;
 
   .date-row {
-
     @extend %clear;
 
     border-bottom: 1px solid #acbfcc;
@@ -1858,7 +1937,6 @@ h2 + .bullets {
         font-size: em(14px);
       }
     }
-
   }
 }
 
@@ -1878,7 +1956,8 @@ h2 + .bullets {
   }
 } //.info
 
-.maps, .address {
+.maps,
+.address {
   float: left;
   width: 50%;
 
@@ -1889,8 +1968,8 @@ h2 + .bullets {
 }
 
 .maps {
-
-  .images, #map_canvas {
+  .images,
+  #map_canvas {
     border: 3px solid $light-gray;
   }
 
@@ -1917,7 +1996,8 @@ h2 + .bullets {
   }
 
   @media screen {
-    h5, h4 {
+    h5,
+    h4 {
       font-weight: 300;
       color: $black;
     }
@@ -1938,7 +2018,9 @@ h2 + .bullets {
     }
   }
 
-  h5, h4, p {
+  h5,
+  h4,
+  p {
     line-height: 1.2em;
   }
 
@@ -1947,7 +2029,8 @@ h2 + .bullets {
   }
 
   @media print {
-    h4, h5 {
+    h4,
+    h5 {
       clear: both;
     }
 
@@ -1988,7 +2071,8 @@ h2 + .bullets {
     margin-bottom: 0;
   }
 
-  a, span {
+  a,
+  span {
     color: $default-color;
   }
 } //.venue
@@ -2055,8 +2139,8 @@ h2 + .bullets {
     }
 
     @media all and (max-width: 560px) {
-      >div {
-         padding: 0;
+      > div {
+        padding: 0;
       }
     }
   }
@@ -2089,13 +2173,16 @@ h2 + .bullets {
     //float: left;
   }
 
-  input, button, a {
+  input,
+  button,
+  a {
     float: left;
     height: 60px;
     line-height: 60px;
   }
 
-  input, button {
+  input,
+  button {
     border: none;
   }
 
@@ -2109,7 +2196,8 @@ h2 + .bullets {
     cursor: pointer;
   }
 
-  button, a {
+  button,
+  a {
     margin-right: 1px;
     width: 60px;
     text-align: center;
@@ -2153,7 +2241,7 @@ h2 + .bullets {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparentize($black, .1);
+  background-color: transparentize($black, 0.1);
   z-index: 9999;
 } //.overlay ends
 
@@ -2215,8 +2303,9 @@ h2 + .bullets {
     padding-right: 0; //reset
   }
 
-  input, textarea {
-    margin-bottom: $default-spacing * .7;
+  input,
+  textarea {
+    margin-bottom: $default-spacing * 0.7;
 
     &.error {
       border: 3px solid #f8b2b2;
@@ -2238,7 +2327,7 @@ h2 + .bullets {
     right: 18px;
 
     &:hover {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 } //.contact-form ends
@@ -2263,7 +2352,7 @@ h2 + .bullets {
     position: absolute;
     bottom: 0;
     right: 0;
-    @include transition(all, .2s);
+    @include transition(all, 0.2s);
 
     &:hover {
       bottom: -6px;
@@ -2290,7 +2379,6 @@ h2 + .bullets {
     width: 40px;
     position: absolute;
     right: -40px;
-
   }
 
   .info-box {
@@ -2298,7 +2386,7 @@ h2 + .bullets {
     background: #acbfcc;
     text-align: center;
     color: $white;
-    @include transition(all, .2s);
+    @include transition(all, 0.2s);
     padding: 0;
 
     .icon-holder {
@@ -2306,7 +2394,7 @@ h2 + .bullets {
       width: 40px;
       height: 40px;
       padding: 0;
-      font-size:14px;
+      font-size: 14px;
     }
   }
 } //.back ends
@@ -2319,8 +2407,7 @@ h2 + .bullets {
 @media print {
   .section.social,
   .back,
-  .footer,
-  {
+  .footer {
     display: none;
   }
 
@@ -2348,7 +2435,9 @@ h2 + .bullets {
     }
   }
 
-  .when, .where, .register-now {
+  .when,
+  .where,
+  .register-now {
     position: initial;
     float: left;
     max-width: 50%;
@@ -2382,7 +2471,6 @@ h2 + .bullets {
     .image-attribution {
       display: none;
     }
-
   }
 
   .speakers + #dates + .dates {
@@ -2404,11 +2492,12 @@ h2 + .bullets {
   }
 }
 
-p.error, p.message {
+p.error,
+p.message {
   text-transform: none; //reset
   font-size: em(14px, 14px); //reset
   margin: 0; //reset
-  margin-top: $default-spacing * .7;
+  margin-top: $default-spacing * 0.7;
   font-family: $default-font; //reset
   color: $default-color;
 }
@@ -2517,14 +2606,14 @@ p a:hover {
 }
 
 .news {
-   .header {
-      @media all and (max-width: 940px) {
-        height: 1002px;
-      }
-   }
-   .intro {
-      @media screen and (max-width: 1180px) {
-         margin-top: -623px;
-      }
-   }
+  .header {
+    @media all and (max-width: 940px) {
+      height: 1002px;
+    }
+  }
+  .intro {
+    @media screen and (max-width: 1180px) {
+      margin-top: -623px;
+    }
+  }
 }

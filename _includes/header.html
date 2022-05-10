@@ -1,57 +1,70 @@
 <!-- header -->
 <div class="header">
-   <!-- header container -->
-   <div class="container">
-      <h1><a href="/">WAISC 2022</a></h1>
-      <p class="subtitle">
-         Workshop on AI & Digital Twins for Smart Cities
-      </p>
+  <!-- header container -->
+  <div class="container">
+    <h1><a href="/">WAISC 2022</a></h1>
+    <p class="subtitle">Workshop on AI & Digital Twins for Smart Cities</p>
 
-      <!-- url -->
-      <div class="url info-box">
-         <div>
-            <p><a href="https://waisc2022.dfki.de" target="_blank">waisc2022.dfki.de</a></p>
-         </div>
+    <!-- url -->
+    <div class="url info-box">
+      <div>
+        <p>
+          <a href="https://waisc2022.dfki.de" target="_blank"
+            >waisc2022.dfki.de</a
+          >
+        </p>
       </div>
-      <!-- url ends!-->
+    </div>
+    <!-- url ends!-->
 
-      {% if page.header-when %}
-      <!-- when -->
-      <div class="when info-box">
-         <div class="icon-holder">
-            <i class="fa fa-calendar"></i>
-         </div>
-         <div>
-            <p><strong>When</strong></p>
-            <p><span>{{page.header-when}}</span></p>
-         </div>
+    {% if page.header-when %}
+    <!-- when -->
+    <div class="when info-box">
+      <div class="icon-holder">
+        <i class="fa fa-calendar"></i>
       </div>
-      <!-- when ends!-->
-
-      <!-- where -->
-      <a href="#location">
-         <div class="where info-box">
-            <div class="icon-holder">
-               <i class="fa fa-map-marker"></i>
-            </div>
-
-            <div>
-               <p><strong>Where</strong></p>
-               <p><span>Trier, Germany</span><br />University of Trier</p>
-            </div>
-         </div>
-      </a>
-      <!-- where ends! -->
-
-      <!-- recent news -->
-      {% include news.html %}
-      <!-- recent news ends! -->
-      {% endif %}
-
-      <div class="image-attribution">
-         <a href="https://www.flickr.com/photos/v230gh/36869016425/" target="_blank">Background Image “Trier”</a> by <a href="https://www.flickr.com/photos/v230gh/" target="_blank">Günter Hentschel</a> (<a href="https://creativecommons.org/licenses/by-nd/2.0/" target="_blank">CC BY-ND 2.0</a>)
+      <div>
+        <p><strong>When</strong></p>
+        <p><span>{{page.header-when}}</span></p>
       </div>
-   </div>
-   <!-- header container ends! -->
+    </div>
+    <!-- when ends!-->
+
+    <!-- where -->
+    <a href="#location">
+      <div class="where info-box">
+        <div class="icon-holder">
+          <i class="fa fa-map-marker"></i>
+        </div>
+
+        <div>
+          <p><strong>Where</strong></p>
+          <p><span>Trier, Germany</span><br />University of Trier</p>
+        </div>
+      </div>
+    </a>
+    <!-- where ends! -->
+
+    <!-- recent news -->
+    {% include news.html %}
+    <!-- recent news ends! -->
+    {% endif %}
+
+    <div class="image-attribution">
+      <a
+        href="https://www.flickr.com/photos/v230gh/36869016425/"
+        target="_blank"
+        >Background Image “Trier”</a
+      >
+      by
+      <a href="https://www.flickr.com/photos/v230gh/" target="_blank"
+        >Günter Hentschel</a
+      >
+      (<a href="https://creativecommons.org/licenses/by-nd/2.0/" target="_blank"
+        >CC BY-ND 2.0</a
+      >)
+    </div>
+  </div>
+  <!-- header container ends! -->
 </div>
 <!-- header ends! -->
