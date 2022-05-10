@@ -1,19 +1,22 @@
 ---
 layout: base
 ---
-<div class="page news{% if page.page-class %} {{page.page-class}}{% endif %}{% if page.event %} news-{{page.event}}{% endif %}">
-   {% include header.html %}
-   <!-- intro -->
-   <div class="intro">
-      <div class="container">
-         <h3>
-            <strong>{{ page.title }}</strong><br />
-            {{ page.subtitle }}
-         </h3>
 
-         <p>{{ content }}</p>
-      </div>
-   </div>
+<div
+  class="page news{% if page.page-class %} {{page.page-class}}{% endif %}{% if page.event %} news-{{page.event}}{% endif %}"
+>
+  {% include header.html %}
+  <!-- intro -->
+  <div class="intro">
+    <div class="container">
+      <h3>
+        <strong>{{ page.title }}</strong><br />
+        {{ page.subtitle }}
+      </h3>
 
-   {% include footer.html %}
+      <p>{{ content }}</p>
+    </div>
+  </div>
+
+  {% include footer.html %}
 </div>

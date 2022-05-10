@@ -1,8 +1,7 @@
 ---
 layout: base
 ---
+
 <div class="page{% if page.event %} {{page.event}}{% endif %}">
-   {% include header.html %}
-   {{ content }}
-   {% include footer.html %}
+  {% include header.html %} {{ content }} {% include footer.html %}
 </div>
