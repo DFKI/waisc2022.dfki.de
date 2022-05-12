@@ -2145,7 +2145,7 @@ h2 + .bullets {
     }
   }
 
-  div {
+  .container > div {
     padding: 0 60px;
     max-width: 1180px;
 
@@ -2199,7 +2199,6 @@ h2 + .bullets {
   button,
   a {
     margin-right: 1px;
-    width: 60px;
     text-align: center;
     color: $white;
     background-color: $default-font-color;
@@ -2207,6 +2206,22 @@ h2 + .bullets {
 
     &:hover {
       color: $default-color;
+    }
+  }
+
+  .f-left {
+    float: left;
+  }
+
+  .twitter {
+    float: right;
+
+    a {
+      padding: 0 20px;
+
+      span {
+        margin-left: 10px;
+      }
     }
   }
 } //.social ends
