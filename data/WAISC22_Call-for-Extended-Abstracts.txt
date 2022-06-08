@@ -1,0 +1,41 @@
+WAISC @ KI2022: Call for Extended Abstracts
+-------------------------------------------
+
+WORKSHOP ON AI & DIGITAL TWINS FOR SMART CITIES
+Workshop at KI2022 in Trier, Germany
+September 19th - September 23rd 2022
+
+  Workshop Website:   https://waisc2022.dfki.de/
+  Conference Website: https://ki2022.gi.de/
+
+Important dates:
+  - Extended abstract submission: July 15
+  - Notification of acceptance: August 1
+  - Publication of collected abstracts: August 20
+  - Workshop: 19th or 20th September 2022, tba.
+
+Smart cities are a collective term for the use of information technology in urban context. As a subfield, digital twins for cities is a promising topic with unexplored potential. Both topics are influenced by different spheres of AI: acquisition and evaluation of big data, semantic technologies, agent-based modeling/distributed simulation, but also the human-computer interaction challenges that arise from the work with digital twins. As such, both topics are deeply nested in the context of the KI2022 conference. In this workshop, we aim to examine the different angles, challenges and technologies from which the smart city concept can benefit from AI and digital twins. We call for extended abstracts on past works and experience, demonstrations of implemented systems and presentations of novel research questions and ideas to promote a joint discussion on how the use of digital twins for smart cities can be advanced by means of AI to address future challenges.
+
+Topics include but are not limited to:
+  - What constitutes a digital twin for a smart city, and how can this information be represented adequately in order to allow the application of AI while at the same time protecting the rights and interests of citizens and society?
+  - Is a digital twin in a smart city just a simulation or a semantic data space?
+  - What are online and offline properties of smart city applications?
+  - What are successful implementations of digital twins for smart cities, esp. with a focus on AI?
+  - How can aspects of transparency and explainability be supported?
+  - Which organizational structures are required to design, build, and use a digital twin for smart cities?
+  - How do citizens interact with smart city applications? What is required to ensure their broad acceptance?
+
+Submission:
+  - Extended abstracts may consist of up to 3 pages (excl. references) 
+  - Presentation of extended abstracts and panel discussions
+  - Joint publication of postproceedings in thematic groups
+
+Format and schedule:
+The workshop is planned to be a physical event. All accepted submissions will be grouped into related topic blocks, during which each participant presents their contribution in a 10 minute presentation. Each block is concluded by a panel talk, summarizing common findings, experiences and problems encountered in this topic block.
+
+Organizers:
+  Falco Nogatz, Veronika Kurchyna, Ingo J. Timm, 
+  Benjamin Weyers, Fabian Lorig, Martin Memmel
+
+Workshop website:
+  https://waisc2022.dfki.de/
