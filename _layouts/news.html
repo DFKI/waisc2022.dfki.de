@@ -9,6 +9,13 @@ layout: base
   <!-- intro -->
   <div class="intro">
     <div class="container">
+      <div class="info-box right">
+        <div class="icon-holder">
+          <!--<i class="fa fa-newspaper-o"></i>-->
+          <span class="date">{{ page.date | date: "%d" }}</span>
+          <span class="month">{{ page.date | date: "%b" }}</span>
+        </div>
+      </div>
       <h3>
         <strong>{{ page.title }}</strong><br />
         {{ page.subtitle }}
