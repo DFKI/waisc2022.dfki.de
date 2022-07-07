@@ -285,7 +285,7 @@ a {
   }
 
   .subtitle {
-    margin-bottom: $default-spacing * 8;
+    margin-bottom: $default-spacing * 6;
   }
 
   a {
@@ -332,7 +332,7 @@ a {
 }
 
 .where {
-  bottom: $default-spacing * 9;
+  bottom: $default-spacing * 11;
 
   @media all and (max-width: 940px) {
     bottom: none; //reset
